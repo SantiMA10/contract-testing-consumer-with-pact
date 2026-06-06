@@ -48,9 +48,12 @@ cd ../orders-api && npm run test:pact
 
 Abre [http://localhost:9292](http://localhost:9292) para ver contratos y resultados de verificación en el broker (usuario/contraseña: `pact` / `pact`).
 
+El broker local usa la imagen Docker del [Pact Broker](https://github.com/pact-foundation/pact_broker) oficial.
+
 ## Documentación
 
 - [Documentación completa](docs/consumer-driven-testing.md) — metodología, arquitectura, flujo de trabajo y criterios de éxito
+- [Pact Broker (GitHub)](https://github.com/pact-foundation/pact_broker) — repositorio oficial del broker
 - [orders-api/README.md](orders-api/README.md) — proveedor REST
 - [checkout-service/README.md](checkout-service/README.md) — consumidor de checkout
 - [shipping-service/README.md](shipping-service/README.md) — consumidor de envíos

@@ -31,6 +31,8 @@ Los **provider states** permiten preparar datos de prueba antes de cada interacc
 
 Centraliza contratos y resultados de verificación. Permite responder preguntas como “¿puedo desplegar esta versión del proveedor sin romper a mis consumidores?” (can-i-deploy).
 
+Repositorio oficial: [pact-foundation/pact_broker](https://github.com/pact-foundation/pact_broker). En esta PoC se levanta con la imagen Docker `pactfoundation/pact-broker` definida en `docker-compose.yml`.
+
 ## Arquitectura
 
 ```mermaid
@@ -96,7 +98,7 @@ Cada servicio es un proyecto Node.js independiente con su propio `package.json`,
 | HTTP | Express |
 | Tests | Jest + babel-jest (requerido para `@pact-foundation/pact` v16) |
 | Contratos | `@pact-foundation/pact` v16 (`PactV3`, `MatchersV3`, `Verifier`) |
-| Broker | Pact Broker local (Docker) |
+| Broker | [Pact Broker](https://github.com/pact-foundation/pact_broker) local (Docker) |
 | HTTP client | `fetch` nativo |
 
 ### Configuración Jest
