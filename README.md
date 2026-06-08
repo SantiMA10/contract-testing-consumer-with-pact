@@ -22,7 +22,6 @@ cp .env.example .env
 npm i
 
 # 4. Generar y publicar contratos (consumidores)
-npm run test
 npm run pact:publish
 
 # 5. Verificar contratos (proveedor; usa PACT_USE_BROKER del .env)
