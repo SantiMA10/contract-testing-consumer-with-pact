@@ -1,5 +1,9 @@
 {
   "name": "contract-testing-consumer-with-pact",
   "workspaces": ["checkout-service", "shipping-service", "orders-api"],
-  "type": "commonjs"
+  "scripts": {
+    "test": "npm run test --workspaces",
+    "pact:test": "npm run test:pact --workspace orders-api",
+    "pact:publish": "npm run pact:publish --workspace checkout-service --workspace shipping-service"
+  }
 }
