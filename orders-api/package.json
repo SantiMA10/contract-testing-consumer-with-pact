@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "test": "vitest run",
-    "test:pact": "vitest run test/provider.pact.test.js"
+    "pact:test": "vitest run --project=pact"
   },
   "dependencies": {
     "express": "^4.21.2"

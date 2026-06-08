@@ -8,5 +8,14 @@ module.exports = {
     deps: {
       inline: ['@pact-foundation/pact', 'https-proxy-agent', 'agent-base', 'axios'],
     },
+    projects: [
+			{
+				extends: true,
+				test: {
+					name: "pact",
+					include: ["./test/**/*.pact.test.ts"],
+				},
+			},
+		],
   },
 };
