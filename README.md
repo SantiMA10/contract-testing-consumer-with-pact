@@ -11,7 +11,7 @@ Prueba de concepto de **Consumer Driven Contract Testing** con Pact: un API REST
 
 ```bash
 # 1. Levantar Pact Broker
-docker compose up -d
+npm run pact:docker:up
 
 # 2. Copiar variables de entorno
 cp .env.example .env
@@ -27,6 +27,9 @@ npm run pact:publish
 
 # 5. Verificar contratos (proveedor; usa PACT_USE_BROKER del .env)
 npm run pact:test
+
+# 6. Apagar el pact broker
+npm run pact:docker:down
 ```
 
 ### Verificación local (sin broker)

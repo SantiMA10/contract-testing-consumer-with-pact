@@ -3,6 +3,8 @@
   "workspaces": ["checkout-service", "shipping-service", "orders-api"],
   "scripts": {
     "test": "npm run test --workspaces",
+    "pact:docker:up": "docker-compose up -d",
+    "pact:docker:down": "docker-compose down",
     "pact:test": "npm run test:pact --workspace orders-api",
     "pact:publish": "npm run pact:publish --workspace checkout-service --workspace shipping-service"
   }
